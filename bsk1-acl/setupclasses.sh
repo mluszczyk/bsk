@@ -16,14 +16,16 @@ function setupuserdir {
     setfacl -m group:$class:x $user_home
     setfacl -m group:staff:x $user_home
     setfacl -m user:master:x $user_home
+    setfacl -d -m other::--- $user_home
 
     mkdir $user_public
     chown $user:$user $user_public
-    chmod 0700 $user_home
+    chmod 0700 $user_public
     setfacl -m group:$class:x $user_public
     setfacl -d -m group:$class:rx $user_public
-    setfacl -m group:staff:rx $user_public
+    setfacl -m group:staff:x $user_public
     setfacl -d -m group:staff:rwx $user_public
+    setfacl -m user:master:rwx $user_public
     setfacl -d -m user:master:rwx $user_public
     
 }
