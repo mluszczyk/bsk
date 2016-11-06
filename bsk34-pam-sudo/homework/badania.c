@@ -185,7 +185,19 @@ int main () {
     fprintf(stderr, "Logged in.\n");
   }
 
+  retval = pam_open_session(pamh, 0);
+  if (retval != 0) {
+    fprintf(stderr, "Could not open session. Exiting.\n");  
+    exit(EXIT_FAILURE);
+  }
+
   main_loop();
+
+  retval = pam_close_session(pamh, 0);
+  if (retval != 0) {
+    fprintf(stderr, "Closing session failed.\n");
+    exit(EXIT_FAILURE);
+  }
  
   pam_end(pamh, PAM_SUCCESS);
   return 0;
