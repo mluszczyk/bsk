@@ -1,3 +1,3 @@
-counter: counter.c
-	cc -Wall counter.c -o counter -g -std=c99 -Wall
+badania: badania.c
+	gcc -Wall badania.c -o badania -g -std=gnu99 -Wall -lpam -lpam_misc
 	
