@@ -28,5 +28,5 @@ guest	ALL=(ALL:ALL) ALL
 #includedir /etc/sudoers.d
 
 # BSK: Skonfiguruj sudo, aby użytkownik user2 mógł instalować pakiety (polecenie apt-get).
-user2 ALL= /usr/bin/apt-get install
+user2 ALL= /usr/bin/apt-get
 
