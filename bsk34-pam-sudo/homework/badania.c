@@ -10,7 +10,7 @@
 #define LINE_LENGTH 1048576
 #define STAT_NUM 5
 
-static struct pam_conv login_conv = {
+static struct pam_conv badania_conv = {
   misc_conv,               /* przykładowa funkcja konwersacji z libpam_misc */
   NULL                        /* ewentualne dane aplikacji (,,domknięcie'') */
 };
@@ -162,7 +162,7 @@ int main () {
   int retval;
   char *username = NULL;
  
-  retval = pam_start("login", username, &login_conv, &pamh);
+  retval = pam_start("badania", username, &badania_conv, &pamh);
   if (pamh == NULL || retval != PAM_SUCCESS) {
     fprintf(stderr, "Error when starting: %d\n", retval);
     exit(EXIT_FAILURE);
