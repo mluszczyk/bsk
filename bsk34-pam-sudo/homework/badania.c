@@ -1,5 +1,6 @@
 #include <ctype.h>
 #include <security/pam_misc.h>
+#include <security/pam_modules.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -164,15 +165,24 @@ int main () {
   retval = pam_start("login", username, &login_conv, &pamh);
   if (pamh == NULL || retval != PAM_SUCCESS) {
     fprintf(stderr, "Error when starting: %d\n", retval);
-    exit(1);
+    exit(EXIT_FAILURE);
   }
+
+  retval = pam_set_item(pamh, PAM_USER_PROMPT, "Badania korpusowe? ");
+  if (retval != PAM_SUCCESS) {
+    fprintf(stderr, "Couldn't set PAM prompt. Exiting.");
+    exit(EXIT_FAILURE);
+  }
+
  
   retval = pam_authenticate(pamh, 0);  /* próba autoryzacji */
   if (retval != PAM_SUCCESS) {
-    fprintf(stderr, "Chyba się nie udało!\n");
+    fprintf(stderr, "Login failed!\n");
     const char *message = pam_strerror(pamh, retval);
     printf("error %d: %s\n", retval, message);
-    exit(2);
+    exit(EXIT_FAILURE);
+  } else {
+    fprintf(stderr, "Logged in.\n");
   }
 
   main_loop();
