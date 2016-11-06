@@ -4,9 +4,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-static const size_t MAX_WORDS = 100000;
-static const size_t LINE_LENGTH = 1048576;  // must be greater than 3 for security reasons
-static const size_t STAT_NUM = 5;
+#define MAX_WORDS 100000
+#define LINE_LENGTH 1048576
+#define STAT_NUM 5
 
 struct word_counter_item {
     char *word;
@@ -101,6 +101,11 @@ static void process_input(bool* input_finished) {
     bool no_input = true;
 
     while (fgets(tmp_line, (int) LINE_LENGTH, stdin)) {
+        if (strstr(tmp_line, ".") != NULL) {
+            fprintf(stderr, "Found a point in the line. Exiting.\n");
+            exit(EXIT_SUCCESS);
+        }
+
         replace_endline_with_zero(tmp_line, LINE_LENGTH);
         if (strncmp(tmp_line, "==", 3) == 0) {
             if (no_input) {
