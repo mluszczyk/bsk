@@ -58,6 +58,10 @@ static void add_word(const char *word, size_t length) {
     }
 
     char *word_copy = calloc(length + 1, sizeof(char));
+    if (word_copy == NULL) {
+        fprintf(stderr, "Failed to allocate memory\n");
+        exit(EXIT_FAILURE);
+    }
     for (size_t i = 0; i < length; ++i) {
         word_copy[i] = word[i];
     }
