@@ -3,12 +3,12 @@
 set -x
 set -e
 
-SERVER=172.28.128.3
+SERVER=172.28.128.10
 
-ssh-keygen -f ~/.ssh/id_rsa -P herbata
+ssh-keygen -f ~/.ssh/id_rsa -P ''
 cat <<EOF > ~/.ssh/config
 Host server
     Hostname $SERVER
     User guest
 EOF
-ssh-copy-id $SERVER
+ssh-copy-id server

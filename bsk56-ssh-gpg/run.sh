@@ -5,20 +5,20 @@
 set -x
 set -e
 
-funcation prepareapt() {
+function prepareapt() {
     sudo apt-get update
-    sudo apt-get install sshfs chpasswd
+    sudo apt-get install sshfs
 }
 
 function prepareguestaccount() {
-    useradd guest
-    chpasswd guest <<<"guest:asdfasdf"
+    sudo useradd -m guest
+    sudo passwd guest
 }
 
 # Klucze i konfiguracja klienta.
 function setupclient() {
     # Stwórz guestowi parę kluczy SSH, klucz prywatny chroniony hasłem. 
-    ssh-keygen -f ~/.ssh/id_rsa_students -Pkotkidwa
+    ssh-keygen -f ~/.ssh/id_rsa_students
 
     # Umieść klucz publiczny na komputerze students.
     cat <<'EOF' > ~/.ssh/config
@@ -48,7 +48,8 @@ function setupmounts() {
 }
 
 prepareapt
-# setupclient
+prepareguestaccount
+setupclient
 setupssh
-# setupmounts
+setupmounts
 
