@@ -7,7 +7,7 @@ set -xe
 
 docker exec bsk-apache mkdir -p /ca
 docker cp create_certs.sh bsk-apache:/ca/
-# docker exec -it bsk-apache /bin/bash /ca/create_certs.sh
+docker exec -it bsk-apache /bin/bash -c "cd /ca && /ca/create_certs.sh"
 docker cp bsk-apache:/ca/newcert.pem .
 docker cp bsk-apache:/ca/newkey.pem .
 docker cp bsk-apache:/ca/demoCA/cacert.pem .
