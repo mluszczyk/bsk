@@ -1,3 +1,9 @@
+#!/bin/bash
+
+# Generuje certyfikaty.
+# Poniżej znajdują się skopiowane i dostosowane polecenia z CA.sh.
+# CA.sh nie pozwala zmieniać ważności certyfikatu CA.
+
 set -xe
 
 CATOP=./demoCA
@@ -24,10 +30,11 @@ openssl ca -create_serial -out ${CATOP}/$CACERT $CADAYS -batch \
 	   -infiles ${CATOP}/$CAREQ
 
 echo Creating CA request
-openssl req -new -keyout newkey.pem -out newreq.pem -days 1460
+DAYS="-days 1460"
+openssl req -new -keyout newkey.pem -out newreq.pem $DAYS
 
 echo Removing password
 openssl rsa -in newkey.pem -out newkey.pem
 
 echo Signing request by CA
-openssl ca -policy policy_anything -out newcert.pem -infiles newreq.pem
+openssl ca -policy policy_anything $DAYS -out newcert.pem -infiles newreq.pem
