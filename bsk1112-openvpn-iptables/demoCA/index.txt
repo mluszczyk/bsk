@@ -1,2 +1,0 @@
-V	210113141800Z		1000	unknown	/C=PL/ST=mazowieckie/L=Warsaw/O=MIMUW/CN=user 1/emailAddress=user1@mimuw.edu.pl
-V	210113141808Z		1001	unknown	/C=PL/ST=mazowieckie/L=Warsaw/O=MIMUW/CN=user 2/emailAddress=user2@mimuw.edu.pl

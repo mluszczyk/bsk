@@ -1,0 +1,94 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 2 (0x2)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=PL, ST=mazowieckie, L=Warsaw, O=MIMUW, OU=BSK, CN=MIMUW CA/name=EasyRSA/emailAddress=bsk@mimuw.edu.pl
+        Validity
+            Not Before: Jan 14 23:25:56 2017 GMT
+            Not After : Jan 12 23:25:56 2027 GMT
+        Subject: C=PL, ST=mazowieckie, L=Warsaw, O=MIMUW, OU=BSK, CN=john doe/name=EasyRSA/emailAddress=john@mimuw.edu.pl
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:e3:f0:20:cd:a2:1e:b3:a0:05:bf:bc:af:cf:08:
+                    6b:fd:59:dc:80:f6:19:04:57:ac:5d:df:0b:30:8c:
+                    40:06:a4:4c:5d:d0:a1:be:8e:a7:23:07:70:2a:db:
+                    6e:0c:15:32:dc:83:97:d6:fb:22:02:97:93:3b:94:
+                    f7:db:f0:f2:8c:27:f0:a6:da:39:58:f6:70:24:f7:
+                    76:b3:f5:43:5b:de:69:4f:c2:43:59:b8:3c:00:dc:
+                    fe:d4:91:31:6d:d9:9d:8d:f3:6d:f3:b4:ea:14:16:
+                    ed:b2:d8:36:d5:75:67:90:2b:98:45:24:47:41:9a:
+                    74:4e:f1:87:07:3a:5c:52:50:7b:dd:b8:c0:a1:8e:
+                    de:36:9d:04:f9:8d:b7:7e:37:89:69:d5:cf:05:89:
+                    f2:a2:f4:76:61:71:ff:d9:e4:a9:87:2a:37:6e:09:
+                    bd:83:ad:5b:0b:f9:36:02:4a:e8:05:30:60:9e:d9:
+                    bf:5b:54:0a:b4:53:03:f0:fa:af:2e:99:8d:2f:ed:
+                    6e:40:b3:72:f2:a7:71:d6:70:39:15:15:4d:88:06:
+                    13:fd:3d:a1:ad:76:d8:80:2c:cc:6a:01:65:e5:92:
+                    61:49:2c:a1:d2:34:b8:27:f1:5f:49:08:db:fe:e5:
+                    3f:c9:e0:1b:e4:a1:f6:c5:55:42:e9:d1:ba:37:28:
+                    f0:53
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                Easy-RSA Generated Certificate
+            X509v3 Subject Key Identifier: 
+                16:86:E1:43:A2:DD:26:7E:CA:8E:7C:1B:4A:6E:77:CA:30:65:D4:E2
+            X509v3 Authority Key Identifier: 
+                keyid:90:59:25:13:65:12:BC:BD:E4:F8:5B:9B:5B:64:B4:7C:EF:70:62:87
+                DirName:/C=PL/ST=mazowieckie/L=Warsaw/O=MIMUW/OU=BSK/CN=MIMUW CA/name=EasyRSA/emailAddress=bsk@mimuw.edu.pl
+                serial:F2:A9:E7:08:D4:D0:E7:54
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha256WithRSAEncryption
+         75:83:d2:fd:24:c6:0e:ae:73:ed:49:db:94:d2:e7:52:b8:9f:
+         07:a1:6b:ce:1d:36:29:03:38:d1:7b:84:8c:8b:db:9f:16:a8:
+         6b:82:fd:ed:d2:d9:0a:ef:dc:8c:e0:09:03:03:b4:64:c7:50:
+         7d:c6:4d:7e:fb:dc:c4:80:68:b9:34:1d:00:72:f3:2e:a9:7a:
+         8b:18:f2:a4:e8:b7:d5:c6:f0:82:1d:db:f2:83:76:66:aa:c0:
+         30:4f:60:41:45:a6:5e:3d:e9:aa:c0:3e:d6:17:38:20:41:d2:
+         f4:54:ea:1b:b4:ad:fd:fa:26:10:38:56:23:9d:1a:38:7a:f5:
+         bc:f3:50:5b:2e:be:a3:c3:75:66:a9:bb:9d:19:ad:37:c2:ec:
+         1a:d4:6b:a3:01:c5:35:8f:b9:14:2a:be:72:56:8f:da:db:d7:
+         07:9c:d5:bc:6c:a3:4a:29:14:75:65:d4:99:bf:d6:67:5d:be:
+         f5:e7:2a:d3:8f:ce:54:fc:5c:35:ad:7d:6d:6a:2d:46:ba:79:
+         d7:cf:1d:43:2a:5d:84:4c:7a:40:14:9e:ec:d1:ff:1a:e6:34:
+         8f:c0:f9:84:d9:6c:68:9b:00:76:cf:a4:7d:c5:18:e8:27:0e:
+         b0:29:29:3f:e7:98:fa:d3:06:56:67:0c:0e:fa:53:f2:c9:e7:
+         73:78:06:3d
+-----BEGIN CERTIFICATE-----
+MIIE/zCCA+egAwIBAgIBAjANBgkqhkiG9w0BAQsFADCBmDELMAkGA1UEBhMCUEwx
+FDASBgNVBAgTC21hem93aWVja2llMQ8wDQYDVQQHEwZXYXJzYXcxDjAMBgNVBAoT
+BU1JTVVXMQwwCgYDVQQLEwNCU0sxETAPBgNVBAMTCE1JTVVXIENBMRAwDgYDVQQp
+EwdFYXN5UlNBMR8wHQYJKoZIhvcNAQkBFhBic2tAbWltdXcuZWR1LnBsMB4XDTE3
+MDExNDIzMjU1NloXDTI3MDExMjIzMjU1NlowgZkxCzAJBgNVBAYTAlBMMRQwEgYD
+VQQIEwttYXpvd2llY2tpZTEPMA0GA1UEBxMGV2Fyc2F3MQ4wDAYDVQQKEwVNSU1V
+VzEMMAoGA1UECxMDQlNLMREwDwYDVQQDEwhqb2huIGRvZTEQMA4GA1UEKRMHRWFz
+eVJTQTEgMB4GCSqGSIb3DQEJARYRam9obkBtaW11dy5lZHUucGwwggEiMA0GCSqG
+SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDj8CDNoh6zoAW/vK/PCGv9WdyA9hkEV6xd
+3wswjEAGpExd0KG+jqcjB3Aq224MFTLcg5fW+yICl5M7lPfb8PKMJ/Cm2jlY9nAk
+93az9UNb3mlPwkNZuDwA3P7UkTFt2Z2N823ztOoUFu2y2DbVdWeQK5hFJEdBmnRO
+8YcHOlxSUHvduMChjt42nQT5jbd+N4lp1c8FifKi9HZhcf/Z5KmHKjduCb2DrVsL
++TYCSugFMGCe2b9bVAq0UwPw+q8umY0v7W5As3Lyp3HWcDkVFU2IBhP9PaGtdtiA
+LMxqAWXlkmFJLKHSNLgn8V9JCNv+5T/J4BvkofbFVULp0bo3KPBTAgMBAAGjggFP
+MIIBSzAJBgNVHRMEAjAAMC0GCWCGSAGG+EIBDQQgFh5FYXN5LVJTQSBHZW5lcmF0
+ZWQgQ2VydGlmaWNhdGUwHQYDVR0OBBYEFBaG4UOi3SZ+yo58G0pud8owZdTiMIHN
+BgNVHSMEgcUwgcKAFJBZJRNlEry95Phbm1tktHzvcGKHoYGepIGbMIGYMQswCQYD
+VQQGEwJQTDEUMBIGA1UECBMLbWF6b3dpZWNraWUxDzANBgNVBAcTBldhcnNhdzEO
+MAwGA1UEChMFTUlNVVcxDDAKBgNVBAsTA0JTSzERMA8GA1UEAxMITUlNVVcgQ0Ex
+EDAOBgNVBCkTB0Vhc3lSU0ExHzAdBgkqhkiG9w0BCQEWEGJza0BtaW11dy5lZHUu
+cGyCCQDyqecI1NDnVDATBgNVHSUEDDAKBggrBgEFBQcDAjALBgNVHQ8EBAMCB4Aw
+DQYJKoZIhvcNAQELBQADggEBAHWD0v0kxg6uc+1J25TS51K4nweha84dNikDONF7
+hIyL258WqGuC/e3S2Qrv3IzgCQMDtGTHUH3GTX773MSAaLk0HQBy8y6peosY8qTo
+t9XG8IId2/KDdmaqwDBPYEFFpl496arAPtYXOCBB0vRU6hu0rf36JhA4ViOdGjh6
+9bzzUFsuvqPDdWapu50ZrTfC7BrUa6MBxTWPuRQqvnJWj9rb1wec1bxso0opFHVl
+1Jm/1mddvvXnKtOPzlT8XDWtfW1qLUa6edfPHUMqXYRMekAUnuzR/xrmNI/A+YTZ
+bGibAHbPpH3FGOgnDrApKT/nmPrTBlZnDA76U/LJ53N4Bj0=
+-----END CERTIFICATE-----

@@ -1,0 +1,2 @@
+V	270112232447Z		01	unknown	/C=PL/ST=mazowieckie/L=Warsaw/O=MIMUW/OU=BSK/CN=vpn-server/name=EasyRSA/emailAddress=bsk@mimuw.edu.pl
+R	270112232556Z	170114234126Z	02	unknown	/C=PL/ST=mazowieckie/L=Warsaw/O=MIMUW/OU=BSK/CN=john doe/name=EasyRSA/emailAddress=john@mimuw.edu.pl
