@@ -1,31 +1,15 @@
-server setup
-------------
-sudo apt-get update
-sudo apt-get install openvpn
+Available commands
+==================
 
-cd easy-rsa
-. ./vars
-./clean-all 
-./build-ca
-./build-dh 
-./build-key-server vpn-server
-./build-key vpn-client
-# copy stuff
-sudo openvpn --dev tun --tls-server --ifconfig 10.0.0.1 10.0.0.2 --ca ca.crt --cert vpn-server.crt \
-    --key vpn-server.key --dh dh2048.pem --proto tcp-server \
-    --crl-verify /etc/openvpn/crl.pem
+vagrant ssh server -c "/vagrant/setup_server.sh"
+vagrant ssh client -c "/vagrant/setup_client.sh"
+vagrant ssh client -c "/vagrant/add_cert.sh cert_name first_name last_name email"
+vagrant ssh server -c "/vagrant/run_server.sh"
+vagrant ssh server -c "/vagrant/run_client.sh ip cert_name"
+vagrant ssh server -c "/vagrant/revoke_cert.sh cert_name"
 
-sudo iptables -A INPUT -i eth1 -p tcp --dport openvpn -j ACCEPT
-sudo iptables -A INPUT -i eth1 -p tcp -j DROP
+Testing commands
+================
 
-
-
-
-client setup
-------------
-sudo apt-get update
-sudo apt-get install openvpn
-VPN_SERVER_IP=172.28.128.3
-# go to the right dir
-sudo openvpn --dev tun --tls-client --ifconfig 10.0.0.2 10.0.0.1 --ca ca.crt --cert vpn-client.crt \
-    --key vpn-client.key --remote $VPN_SERVER_IP --proto tcp-client
+vagrant ssh server -c "nc -l 1234"
+vagrant ssh client -c "nc 10.0.0.1 1234 -vvv"
