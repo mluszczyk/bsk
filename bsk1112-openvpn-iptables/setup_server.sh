@@ -32,6 +32,6 @@ export KEY_CN="CRL"
 $OPENSSL ca -gencrl -out $KEY_DIR/crl.pem -config "$KEY_CONFIG"
 
 
-sudo iptables -A INPUT -i eth1 -p tcp --dport openvpn -j ACCEPT
+sudo iptables -A INPUT -i eth1 -s 172.28.128.1/24 -p tcp --dport openvpn -j ACCEPT
 sudo iptables -A INPUT -i eth1 -p tcp -j DROP
 
